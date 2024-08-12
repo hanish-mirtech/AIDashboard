@@ -8,8 +8,8 @@ import {
   Badge,
   Typography,
 } from "@mui/material";
-import styrkDarkIcon from "../../assets/images/styrk-icon-dark.svg";
-import userImage from "../../assets/images/user.png";
+import styrkDarkIcon from "../../../public/example-image.png";
+import userImage from "../../../public/user.png";
 import SearchIcon from "@mui/icons-material/Search";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
@@ -37,11 +37,13 @@ import {
 } from "./privacy";
 import { useState } from "react";
 
+
+
 const tabsArray = [
   {
     id: 1,
     text: "Overview",
-    
+   
   },
   {
     id: 2,
@@ -51,29 +53,30 @@ const tabsArray = [
   {
     id: 3,
     text: "Trust",
-   
+  
   },
   {
     id: 4,
     text: "Privacy",
-  
+    
   },
   {
     id: 5,
     text: "LLM Security",
+    
   },
 ];
 
-const HomeScreen = () => {
+const Dashboard = () => {
   const [selectedTabIndex, setSelectedTabIndex] = useState<number>(1);
- 
+
 
   const onTabClick = (tabData: any) => {
     setSelectedTabIndex(tabData.id);
+   console.log(tabData);
   };
   const [navOpen, setNavOpen] = useState<boolean>();
   return (
-    
       <Box bgcolor="#F4F6F5">
         <Box py={4}>
           <Box maxWidth={1312} mx="auto" px={2}>
@@ -254,8 +257,8 @@ const HomeScreen = () => {
           </Grid>
         </Box>
       </Box>
-    
+  
   );
 };
 
-export default HomeScreen;
+export default Dashboard;
