@@ -2,11 +2,11 @@ import React, {  useEffect } from 'react';
 import Dashboard from './dashboard/Dashboard';
 import NotAuthorised from './NotAuthorised';
 
-interface MyComponentProps {
+interface AiDashboardProps {
   userDetails: string;
 }
 
-const MyComponent: React.FC<MyComponentProps> = ({ userDetails }) => {
+const AiDashboard: React.FC<AiDashboardProps> = ({ userDetails }) => {
 
   useEffect(() => {
     // Define the async function inside the useEffect
@@ -31,4 +31,4 @@ const MyComponent: React.FC<MyComponentProps> = ({ userDetails }) => {
   );
 };
 
-export default MyComponent;
+export default AiDashboard;
